@@ -24,7 +24,7 @@ const CarouselButton = ({ showingSlideCardNum, handleClickSlide, isMoving, cardN
      * 2- 4 => -2
      */
     const prevOrder = curHeadCardOrder - showingSlideCardNum;
-    const isLeakNFirstSlide = prevOrder >= -2 && prevOrder < 1;
+    const isLeakNFirstSlide = prevOrder < 1;
     const isFirstShowingSlide = isLeakNFirstSlide || prevOrder === initialHeadCardOrder;
 
     changeBtnActivation(isFirstShowingSlide, setDisabledPrevBtn, setDisabledNextBtn);
